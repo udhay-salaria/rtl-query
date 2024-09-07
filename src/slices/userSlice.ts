@@ -26,7 +26,7 @@ export const userAPI = createApi({
     }),
 
     // Mutation to add User
-    addUsers: builder.mutation<User, User>({
+    addUsers: builder.mutation<User, Partial<User>>({
       query: (user: User) => ({
         url: "/users",
         method: HTTPAction.POST,
@@ -36,8 +36,8 @@ export const userAPI = createApi({
     }),
 
     // Mutation to delete User
-    deleteUser: builder.mutation<User, number>({
-      query: (id: number) => ({
+    deleteUser: builder.mutation<User, Pick<User, "id"> & Partial<User>>({
+      query: (id) => ({
         url: `/user/${id}`,
         method: HTTPAction.DELETE,
       }),
