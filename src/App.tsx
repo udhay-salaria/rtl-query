@@ -1,12 +1,6 @@
-import { Avatar, Code, Spacer, Spinner } from "@nextui-org/react";
 import "./App.css";
-import { useGetUsersQuery } from "./slices/userSlice";
-import Footer from "./components/Footer/Footer";
 
 function App() {
-  const { data } = useGetUsersQuery();
-  console.log(data);
-
   return (
     <div className="h-[100dvh] flex flex-col">
       <main className="flex flex-1 flex-col item-center justify-center">
@@ -23,7 +17,6 @@ function App() {
           </p>
         </div>
       </main>
-      {/* <Footer /> */}
     </div>
   );
 }
