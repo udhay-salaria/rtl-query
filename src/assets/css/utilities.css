@@ -1,0 +1,12 @@
+.gradient-text {
+  font-size: 5rem;
+  background: -webkit-linear-gradient(
+    305deg,
+    rgba(255, 64, 196, 1) 32%,
+    rgba(45, 55, 254, 1) 60%,
+    rgba(29, 156, 253, 1) 78%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
